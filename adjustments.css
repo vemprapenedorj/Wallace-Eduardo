@@ -1,42 +1,34 @@
-/* Photo refinements: preserve the full trainer portrait at every viewport. */
-.field-photo {
-  object-fit: contain;
-  object-position: center bottom;
-  background: #071006;
-}
-
-.service-card {
-  padding: 0;
-  overflow: hidden;
-}
-
-.service-card img {
-  display: block;
-  width: 100%;
-  height: 165px;
+/* Photo refinements & Specific Image Treatments */
+.portrait {
   object-fit: cover;
+  object-position: center top;
+  border-radius: 4px;
 }
 
-.service-card h3,
-.service-card p {
-  margin-inline: 22px;
+.field-photo {
+  object-fit: cover;
+  object-position: top center;
+  background: #071006;
+  border-radius: 4px;
 }
 
-.service-card h3 {
-  margin-top: 20px;
-}
-
-.service-card p {
-  margin-bottom: 25px;
+.training-main img {
+  object-fit: cover;
+  object-position: top center !important;
 }
 
 @media (max-width: 500px) {
   .portrait {
     object-fit: cover;
-    object-position: center;
+    object-position: center top;
   }
 
   .field-photo {
-    object-fit: contain;
+    object-fit: cover;
+    object-position: top center;
+  }
+
+  .training-main {
+    height: 380px;
   }
 }
